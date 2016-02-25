@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Assignment –Make Use of NgClick event directive on the button to show an alert. -->
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="http://localhost:56130/angular.min.js"></script>
+
+    <script type="text/javascript">
+        var modObj = angular.module('myMod', []);
+
+        modObj.controller('mycontroller', function ($scope) {
+            $scope.showAlert = function () {
+                alert("Yo -- You clicked me!");
+            }
+        });
+    </script>
+</head>
+<body ng-app="myMod">
+    <div ng-controller="mycontroller">
+        <button ng-click="showAlert()">Click Here to Show Alert</button>
+    </div>
+</body>
+</html>
